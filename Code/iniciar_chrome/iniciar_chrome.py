@@ -44,8 +44,7 @@ def iniciar_chrome():
     options.add_argument('--no-default-browser-check') #evita el aviso de que Chrome no es el navegador por defecto
     options.add_argument('--no-first-run') #evita la ejecución de ciertas tareas que se realizan la primera vez que se ejecuta Chrome
     options.add_argument('--no-proxy-server') #para no usar proxy, sino conexiones directas
-    options.add_argument('disable-blink-features-AutomationCOntrolled') #evita que selenium sea
-
+    options.add_argument('--disable-blink-features-AutomationControlled') 
     #instanciamos el servicio de chromedriver
     s = Service(
         ruta
