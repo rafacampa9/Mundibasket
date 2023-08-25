@@ -7,8 +7,9 @@ from selenium.webdriver.chrome.service import Service
 from selenium.webdriver.chrome.options import Options
 
 #para instalar automáticamente chromedriver
+import os
+os.environ['WDM_LOCAL'] = '1'
 from webdriver_manager.chrome import ChromeDriverManager
-
 
 
 
@@ -23,7 +24,7 @@ from webdriver_manager.chrome import ChromeDriverManager
 def iniciar_chrome():
     """Inicia Chrome con los parámetros indicados y devuelve el driver"""
 
-    ruta = ChromeDriverManager(path='/home/zaraki/Escritorio/Youtube Data Science/FRIKIdelTO/Data/chromedriver').install()
+    ruta = ChromeDriverManager().install()
     
 
     #OPCIONES de CHROME:
